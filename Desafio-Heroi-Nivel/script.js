@@ -1,5 +1,7 @@
 function classificarHeroi() {
+    // @ts-ignore
     const nome = document.getElementById('hero-name').value;
+    // @ts-ignore
     const xp = parseInt(document.getElementById('hero-xp').value);
     let nivel = '';
     let fase = '';
@@ -45,18 +47,24 @@ function classificarHeroi() {
         resultado = `A Heroína de nome ${nome} está no nível ${nivel}, mudou para a fase ${fase}, parabéns pela vitória!`;
     }
 
+    // @ts-ignore
     document.getElementById('resultado').textContent = resultado;
 
     // Alterar imagem conforme vitória ou derrota
     let heroImage = document.getElementById('hero-image');
     let resultadoImagem = document.getElementById('resultado-imagem');
+    // @ts-ignore
     resultadoImagem.innerHTML = '';
 
     if (vitoria) {
+        // @ts-ignore
         heroImage.src = `nalva-vitoria.png`;
+        // @ts-ignore
         resultadoImagem.innerHTML = `<img src="nalva-fase${fase}.png" alt="Heroína na fase ${fase}">`;
     } else {
+        // @ts-ignore
         heroImage.src = `nalva-derrota.png`;
+        // @ts-ignore
         resultadoImagem.innerHTML = `<img src="nalva-derrota.png" alt="Heroína perdeu">`;
     }
 }
